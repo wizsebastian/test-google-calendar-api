@@ -1,0 +1,26 @@
+extend ../layout/index
+
+block container 
+        div.py-10
+            h1.text-4xl.my-10.font-extrabold.text-center Bienes 
+                spam.font-normal Raices
+            h2.text-center.text-2xl.font-extrabold= page
+            
+            
+            .mt-8.mx-auto.max-w-md
+                .bg-white.py-8.px-4.shadow
+                    form.space-y-5
+                        div
+                            label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold Email:
+                            input#name.w-full.px-3.py-2.border.border-gray-300(placeholder="Email" type="email" name="email") 
+                        div
+                            label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold Contrasena:
+                            input#name.w-full.px-3.py-2.border.border-gray-300(placeholder="Contrasena" type="password" name="password") 
+                        
+                        .flex.items-center.justify-between 
+                            a.text-gray-500.text-xs(href="/auth/register") No tienes cuenta? Crea una
+                            a.text-gray-500.text-xs(href="/auth/olvide-password") Olvidaste tu contrasena
+                        div
+                        button(class="p-5 w-full cursor-pointer  hover:bg-red-300 hover:text-black text-white font-bold text-xl rounded bg-red-500")
+                            | Accede con Google
+                        input(type="submit" value="Acceder" class="p-5 w-full text-white font-bold text-xl rounded cursor-pointer font-bold w-full text-white py-2 bg-indigo-600 hover:bg-indigo-200 hover:text-black")
